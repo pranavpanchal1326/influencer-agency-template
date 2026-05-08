@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block admin page from indexing
+Disallow: /admin
+
+# Sitemap location — update domain before deploying
+Sitemap: https://youragency.com/sitemap.xml

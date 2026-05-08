@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+
+  --font-sans: 'Kumbh Sans', sans-serif;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+}
+
+:root {
+  --background: #EFEDEA;
+  --foreground: #191919;
+  --border: #d1cfc9;
+  --input: #d1cfc9;
+  --ring: #191919;
+
+  --card: #EFEDEA;
+  --card-foreground: #191919;
+
+  --primary: #191919;
+  --primary-foreground: #EFEDEA;
+
+  --secondary: #e5e3e0;
+  --secondary-foreground: #191919;
+
+  --muted: #e5e3e0;
+  --muted-foreground: #6b6b6b;
+
+  --accent: #e5e3e0;
+  --accent-foreground: #191919;
+
+  --destructive: #ef4444;
+
+  --radius: 0px;
+}
+
+@keyframes loaderBar {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes contact-ping {
+  0%   { transform: scale(1);   opacity: 0.5; }
+  70%  { transform: scale(1.55); opacity: 0; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-33.333%); }
+  100% { transform: translateX(0); }
+}
+
+@theme inline {
+  --animate-marquee: marquee var(--marquee-duration, 40s) linear infinite;
+  --animate-marquee-right: marquee-right var(--marquee-duration, 40s) linear infinite;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    /* scroll-behavior handled by Lenis — do not set smooth here */
+  }
+
+  * {
+    cursor: none !important;
+  }
+
+  a, button, [role="button"], input, select, textarea, label {
+    cursor: none !important;
+  }
+
+  body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: #EFEDEA;
+    color: #191919;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
